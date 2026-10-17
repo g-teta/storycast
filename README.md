@@ -64,3 +64,8 @@ Colours, fonts, radii and breakpoints are defined in `scss/_variables.scss`. Fon
 - Respects `prefers-reduced-motion`
 - Layouts adapt from desktop to tablet and mobile widths
 
+##Figma 
+- High Fidelity Mockups: https://www.figma.com/design/XNtlrUcT9TNW0SdN6VbmPI/StoryCast?node-id=0-1&t=t5C9ZtPz7eM1E7sN-1
+- Sitemaps: https://www.figma.com/design/XNtlrUcT9TNW0SdN6VbmPI/StoryCast?node-id=4-2&t=t5C9ZtPz7eM1E7sN-1
+- Wireframes: https://www.figma.com/design/XNtlrUcT9TNW0SdN6VbmPI/StoryCast?node-id=4-3&t=t5C9ZtPz7eM1E7sN-1
+
