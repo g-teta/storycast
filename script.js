@@ -10,7 +10,7 @@ const STORIES = [
     summary: "On the shores of Lake Kivu, one traveler discovers that sometimes the most powerful stories are the ones without words.",
     author: "Eric Mugisha",
     alt: "A lone walker on the shore of Lake Kivu in western Rwanda",
-    image: "pictures/lake-kivu-rwanda-africa-51725776.webp",
+    image: "assets/lake-kivu-rwanda-africa-51725776.webp",
     tone: "kivu",
     transcript: [
       "There is a particular kind of quiet you only find when you leave the road behind. Here, on the shore of Lake Kivu, the green hills rise from the water like old friends. I came looking for a place.",
@@ -46,7 +46,7 @@ const STORIES = [
     summary: "Beyond the city lights, meet the people who give Kigali’s evening streets their unmistakable rhythm.",
     author: "Grace Ingabire",
     alt: "People walking along a lively Kigali street at dusk",
-    image: "pictures/kigali.jpg",
+    image: "assets/kigali.jpg",
     tone: "kigali",
     transcript: [
       "As the last light leaves the sky, another city wakes up. The rain turns every street into a reflection. Behind the little shop doors, people are beginning their evenings.",
