@@ -67,8 +67,3 @@ Colours, fonts, radii and breakpoints are defined in `scss/_variables.scss`. Fon
 - Respects `prefers-reduced-motion`
 - Layouts adapt from desktop to tablet and mobile widths
 
-## Notes
-
-- The Story Room audio is a browser-generated reading of the transcript. Original recordings are not yet available.
-- Do not edit `css/styles.css` directly. Change the SCSS and rebuild.
-
