@@ -10,7 +10,6 @@ StoryCast is a small, accessible website for audio and video stories about Rwand
 | --- | --- | --- |
 | Home | `index.html` | Hero, featured story, filterable story cards (All / Audio / Video), accessibility banner |
 | Story Room | `story.html?id=<story-id>` | Story details, audio reading preview, full transcript with download, related stories |
-| Places | `places.html` | The places in Rwanda where the stories begin |
 | About | `about.html` | Mission and accessibility promise |
 
 Story ids: `kivu-quiet`, `woven-by-hand`, `kigali-after-dark`.
@@ -22,14 +21,13 @@ storycast/
 ├── index.html
 ├── story.html
 ├── about.html
-├── places.html
 ├── script.js          # story data + page logic
 ├── pictures/          # local photos
 ├── scss/              # source styles (edit these)
 │   ├── main.scss
 │   ├── _variables.scss, _mixins.scss, _base.scss,
 │   │   _layout.scss, _components.scss
-│   └── pages/         # _home, _about, _story, _places
+│   └── pages/         # _home, _about, _story
 └── css/styles.css     # compiled output (do not edit by hand)
 ```
 
@@ -51,7 +49,6 @@ All stories live in the `STORIES` array at the top of `script.js`. Each story ha
 
 - **Images:** put photos in `pictures/` and set `image` to the path. If a photo is missing, a coloured placeholder is shown instead.
 - **Video stories:** add a `video` embed URL to the story and the Story Room shows the player instead of the photo.
-- **Places:** edit the `PLACES` array in `script.js`.
 
 ## Design tokens
 
@@ -66,9 +63,4 @@ Colours, fonts, radii and breakpoints are defined in `scss/_variables.scss`. Fon
 - The audio preview uses the browser's built-in speech and shows progress
 - Respects `prefers-reduced-motion`
 - Layouts adapt from desktop to tablet and mobile widths
-
-## Notes
-
-- The Story Room audio is a browser-generated reading of the transcript. Original recordings are not yet available.
-- Do not edit `css/styles.css` directly. Change the SCSS and rebuild.
 

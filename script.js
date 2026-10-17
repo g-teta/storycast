@@ -196,49 +196,6 @@ function initStory() {
   });
 }
 
-/* ---------- Places ---------- */
-const PLACES = [
-  {
-    storyId: "kivu-quiet",
-    name: "Lake Kivu",
-    region: "Western Rwanda",
-    text: "A long lake on Rwanda’s western edge, ringed by green hills. It is a place for slow mornings, quiet shorelines and stories without many words."
-  },
-  {
-    storyId: "woven-by-hand",
-    name: "The hills and villages",
-    region: "Across the countryside",
-    text: "Rwanda is known as the land of a thousand hills. Here, craft is passed from one generation to the next, one patient strand at a time."
-  },
-  {
-    storyId: "kigali-after-dark",
-    name: "Kigali",
-    region: "The capital city",
-    text: "When the light fades, the streets of Kigali fill with cooks, musicians and friends. Every corner has its own rhythm."
-  }
-];
-
-function initPlaces() {
-  const root = document.getElementById("places-list");
-  if (!root) return;
-  root.innerHTML = PLACES.map(p => {
-    const s = STORIES.find(x => x.id === p.storyId);
-    return `<article class="place">
-      ${mediaHTML(s)}
-      <div>
-        <p class="eyebrow">${p.region}</p>
-        <h2>${p.name}</h2>
-        <p class="summary">${p.text}</p>
-        <div class="related-story">
-          <a class="btn" href="${storyUrl(s)}">Read: ${s.title}</a>
-          <span class="meta">${s.type} story · ${s.duration} min</span>
-        </div>
-      </div>
-    </article>`;
-  }).join("");
-}
-
 initHome();
 initAbout();
 initStory();
-initPlaces();
