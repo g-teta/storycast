@@ -1,0 +1,47 @@
+@use "sass:list";
+@use "variables" as *;
+
+// Responsive: styles that apply at tablet width and below
+@mixin tablet {
+  @media (max-width: $bp-tablet) { @content; }
+}
+
+@mixin flex-between($gap: 24px) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gap;
+  flex-wrap: wrap;
+}
+
+// Fluid heading size: min, preferred, max
+@mixin fluid-size($min, $vw, $max) {
+  font-size: clamp(#{$min}, #{$vw}, #{$max});
+}
+
+@mixin eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+@mixin gradient($pair) {
+  background: linear-gradient(135deg, list.nth($pair, 1), list.nth($pair, 2));
+}
+
+@mixin focus-ring {
+  outline: 3px solid $accent;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

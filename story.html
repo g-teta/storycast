@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Story Room — StoryCast</title>
+  <meta name="description" content="Listen, watch or read a StoryCast story, with a full transcript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">StoryCast.</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Discover</a>
+        <a href="places.html">Places</a>
+        <a href="about.html">About StoryCast</a>
+        <a href="about.html#accessibility">Accessibility</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="story-root">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Discover</a> / <span id="crumb-cat"></span>
+        </nav>
+
+        <header class="story-head">
+          <p class="eyebrow" id="story-cat"></p>
+          <h1 id="story-title"></h1>
+          <p class="summary" id="story-summary"></p>
+          <p class="byline">
+            <strong id="story-author"></strong>
+            <span class="muted" id="story-type"></span>
+          </p>
+        </header>
+
+        <div id="story-media"></div>
+        <p class="caption">Story preview</p>
+
+        <section class="player" aria-label="Audio reading preview">
+          <div class="row">
+            <span>Audio reading preview</span>
+            <span id="pct">0%</span>
+          </div>
+          <div class="controls">
+            <button class="btn" id="play-btn" type="button" aria-pressed="false">Play</button>
+            <div class="bar" id="bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+          </div>
+          <p class="note" id="player-note" role="status">Design sample · Listen to a browser-generated reading of the transcript. Original media is not yet available.</p>
+        </section>
+
+        <section class="transcript" aria-labelledby="transcript-title">
+          <div class="transcript-head">
+            <h2 id="transcript-title">The full transcript</h2>
+            <button class="btn btn-light" id="download-btn" type="button">Download transcript</button>
+          </div>
+          <p class="speaker" id="speaker"></p>
+          <div class="transcript-body" id="transcript-body"></div>
+        </section>
+      </div>
+
+      <section class="related" aria-labelledby="related-title">
+        <div class="container">
+          <h2 id="related-title">Keep your curiosity going</h2>
+          <div class="grid" id="related-grid"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <a class="logo" href="index.html">StoryCast.</a>
+        <p>Human stories. Shared with everyone.</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html#accessibility">Made for every listener</a>
+        <span>© 2026 StoryCast</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

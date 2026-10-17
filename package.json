@@ -1,0 +1,13 @@
+{
+  "name": "storycast",
+  "version": "1.0.0",
+  "private": true,
+  "description": "StoryCast — human stories about Rwanda, built with SCSS",
+  "scripts": {
+    "build": "sass --style=compressed --no-source-map scss/main.scss css/styles.css",
+    "watch": "sass --watch scss/main.scss css/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

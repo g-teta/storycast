@@ -1,0 +1,152 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.eyebrow { @include eyebrow; }
+
+.lead {
+  font-size: 22px;
+  line-height: 1.55;
+  color: $muted;
+  max-width: 640px;
+}
+
+.meta { font-size: 14px; color: $muted; }
+
+// Buttons & chips
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $ink;
+  color: $white;
+  border: 1px solid $ink;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font: 600 16px $font-sans;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .15s, background .15s;
+
+  &:hover { transform: translateY(-1px); background: $ink-hover; }
+
+  &-light {
+    background: $white;
+    color: $ink;
+    border-color: $line;
+
+    &:hover { background: $light; }
+  }
+}
+
+.chip {
+  display: inline-block;
+  background: $light;
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+// Photo placeholder: gradient shows until a real photo loads
+.media {
+  position: relative;
+  overflow: hidden;
+  border-radius: $radius-media;
+  @include gradient($tone-kivu);
+  aspect-ratio: 3 / 2;
+  display: grid;
+  place-items: center;
+
+  &.tone-weave { @include gradient($tone-weave); }
+  &.tone-kigali { @include gradient($tone-kigali); }
+  &.wide { aspect-ratio: 32 / 13; }
+  &.small { border-radius: 20px; aspect-ratio: 20 / 13; }
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.media-note {
+  color: $white;
+  font-size: 14px;
+  text-align: center;
+  max-width: 320px;
+  padding: 24px;
+}
+
+// Section heading + filters
+.section-head {
+  h2 { @include fluid-size(30px, 3.5vw, 40px); }
+  p { color: $muted; font-size: 18px; margin-top: 12px; }
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-block: 24px 28px;
+}
+
+.filter {
+  background: transparent;
+  color: $ink;
+  border: 1px solid $line;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font: 500 15px $font-sans;
+  cursor: pointer;
+
+  &:hover { background: $light; }
+
+  &[aria-pressed="true"] {
+    background: $ink;
+    color: $white;
+    border-color: $ink;
+  }
+}
+
+// Story cards
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  h3 {
+    font-size: 26px;
+    line-height: 1.25;
+
+    a {
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
+    }
+  }
+
+  p { color: $muted; }
+  .by { font-size: 14px; font-weight: 500; }
+  .chip { align-self: flex-start; }
+}
+
+// Dark accessibility banner
+.banner {
+  background: $dark;
+  color: $white;
+  border-radius: 32px;
+  padding: 64px 72px;
+  @include flex-between(32px);
+
+  h2 { @include fluid-size(30px, 3.5vw, 40px); max-width: 620px; }
+  p { color: $dark-text; font-size: 18px; margin-top: 12px; max-width: 560px; }
+
+  @include tablet { padding: 40px 28px; }
+}

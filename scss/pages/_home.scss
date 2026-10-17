@@ -1,0 +1,48 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero {
+  padding-block: 56px 32px;
+
+  h1 {
+    @include fluid-size(44px, 7vw, 80px);
+    max-width: 900px;
+    margin-block: 20px 24px;
+  }
+
+  .tagline { margin-top: 20px; font-weight: 500; font-size: 18px; }
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding-block: 16px 72px;
+
+  h2 { @include fluid-size(32px, 4vw, 48px); margin-block: 14px 18px; }
+  .summary { font-size: 18px; color: $muted; max-width: 540px; }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-block: 24px 14px;
+  }
+
+  @include tablet { grid-template-columns: 1fr; gap: 32px; }
+}
+
+.kicker {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+
+  .muted { color: $muted; }
+  .acc { color: $accent; }
+}

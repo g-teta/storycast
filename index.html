@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StoryCast — Stories worth slowing down for</title>
+  <meta name="description" content="Real voices. New perspectives. Audio and video stories from Rwanda, with a full transcript for every story.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">StoryCast.</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Discover</a>
+        <a href="places.html">Places</a>
+        <a href="about.html">About StoryCast</a>
+        <a href="about.html#accessibility">Accessibility</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container hero" aria-labelledby="hero-title">
+      <p class="eyebrow">A little closer to Rwanda</p>
+      <h1 id="hero-title">Stories worth slowing down for.</h1>
+      <p class="lead">Real voices. New perspectives. Discover the extraordinary in the everyday.</p>
+      <p class="tagline">Listen. Watch. Feel something.</p>
+    </section>
+
+    <section class="container featured" id="featured" aria-label="Featured story"></section>
+
+    <section class="container section" aria-labelledby="discover-title">
+      <div class="section-head">
+        <h2 id="discover-title">Find your next story</h2>
+        <p>A different perspective is just a story away.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter stories">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All stories</button>
+        <button class="filter" type="button" data-filter="Audio" aria-pressed="false">Audio</button>
+        <button class="filter" type="button" data-filter="Video" aria-pressed="false">Video</button>
+      </div>
+      <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="container section" aria-labelledby="banner-title">
+      <div class="banner">
+        <div>
+          <h2 id="banner-title">Great stories are for everyone.</h2>
+          <p>Different ways to listen, watch, and connect. Always with access in mind.</p>
+        </div>
+        <a class="btn btn-light" href="about.html#accessibility">Our accessibility promise</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <a class="logo" href="index.html">StoryCast.</a>
+        <p>Human stories. Shared with everyone.</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html#accessibility">Made for every listener</a>
+        <span>© 2026 StoryCast</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

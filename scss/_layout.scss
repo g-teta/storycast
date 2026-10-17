@@ -1,0 +1,65 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.container {
+  width: min($container-max, 100% - $gutter);
+  margin-inline: auto;
+}
+
+.section { padding-block: 56px; }
+
+// Header
+.site-header .container {
+  @include flex-between;
+  padding-block: 24px;
+}
+
+.logo {
+  font-family: $font-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+    color: $muted;
+    font-weight: 500;
+
+    &:hover,
+    &[aria-current="page"] { color: $ink; }
+  }
+
+  @include tablet { gap: 20px; }
+}
+
+// Footer
+.site-footer {
+  border-top: 1px solid $line;
+
+  .container {
+    @include flex-between;
+    padding-block: 40px 48px;
+  }
+
+  .logo { font-size: 24px; }
+  p { color: $muted; font-size: 15px; }
+}
+
+.footer-links {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  color: $muted;
+  font-size: 15px;
+
+  a {
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}

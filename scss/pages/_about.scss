@@ -1,0 +1,63 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.about-hero h1 {
+  @include fluid-size(42px, 6vw, 72px);
+  max-width: 980px;
+  margin-block: 20px 24px;
+}
+
+.mission {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  padding-block: 24px 88px;
+
+  h2 { @include fluid-size(30px, 3.6vw, 44px); margin-top: 16px; }
+
+  .text {
+    display: grid;
+    gap: 20px;
+    font-size: 18px;
+    color: $muted;
+    line-height: 1.7;
+  }
+
+  @include tablet { grid-template-columns: 1fr; gap: 32px; }
+}
+
+.promise {
+  background: $light;
+  padding-block: 72px 88px;
+
+  h2 { @include fluid-size(32px, 4vw, 48px); margin-block: 16px 14px; }
+  .sub { color: $muted; font-size: 18px; }
+}
+
+.cards3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.panel {
+  background: $white;
+  border: 1px solid $line;
+  border-radius: $radius;
+  padding: 32px;
+
+  h3 { font-size: 24px; margin-bottom: 12px; }
+  p { color: $muted; }
+}
+
+.cta {
+  text-align: center;
+  padding-block: 88px;
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+
+  h2 { @include fluid-size(34px, 5vw, 52px); max-width: 900px; }
+  p { font-size: 20px; color: $muted; }
+}
